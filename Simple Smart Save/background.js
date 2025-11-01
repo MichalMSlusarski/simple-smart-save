@@ -75,7 +75,7 @@ async function getDatePrefix() {
 // filneme gen
 async function getDescriptiveFilename(url, blob, fallbackSlug = "image") {
   const ext = getFileExtension(url, blob);
-  const date = await getDatePrefix();
+  const date = await getDatePrefix(); // Aait the async function
 
   try {
     const available = await LanguageModel.availability();
@@ -84,12 +84,13 @@ async function getDescriptiveFilename(url, blob, fallbackSlug = "image") {
       return `${date}_${fallbackSlug}${ext}`;
     }
 
-    // Create a new session for each request instead of reusing global one
-    const namingSession = await LanguageModel.create({
-      expectedInputs: [{ type: "text" }, { type: "image" }],
-      temperature: 0.2,
-      topK: 40
-    });
+    if (!namingSession) {
+      namingSession = await LanguageModel.create({
+        expectedInputs: [{ type: "text" }, { type: "image" }],
+        temperature: 0.2,
+        topK: 40
+      });
+    }
 
     const response = await namingSession.prompt(
       [
@@ -124,7 +125,6 @@ async function getDescriptiveFilename(url, blob, fallbackSlug = "image") {
     return `${date}_${fallbackSlug}${ext}`;
   }
 }
-
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({

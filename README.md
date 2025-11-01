@@ -1,5 +1,7 @@
 # Simple Smart Save
 
+![Banner](https://github.com/MichalMSlusarski/simple-smart-save/banner.png)
+
 This Chrome Extension was built for the **Google Chrome Built-in AI Challenge 2025**.
 
 Most images online have meaningless filenames like `image123.jpg` or `screenshot_final_final2.png`.  

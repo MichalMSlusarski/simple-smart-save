@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Smart Save",
+  "version": "1.2",
+  "description": "Save images with AI-generated meaningful filenames.",
+  "permissions": [
+    "contextMenus",
+    "downloads",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Simple Smart Save",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon.png"
+    }
+  }
+}

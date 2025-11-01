@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Smart Save Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Simple Save Smart Settings</h1>
+
+    <div class="field">
+      <label for="dateFormat">Date format</label>
+      <select id="dateFormat">
+        <option value="YYYY-MM-DD">YYYY-MM-DD (2025-10-07)</option>
+        <option value="DD-MM-YYYY">DD-MM-YYYY (07-10-2025)</option>
+        <option value="MM-DD-YYYY">MM-DD-YYYY (10-07-2025)</option>
+        <option value="YYYYMMDD">YYYYMMDD (20251007)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="separator">Separator</label>
+      <select id="separator">
+        <option value="-">Dash (-)</option>
+        <option value="_">Underscore (_)</option>
+        <option value=" ">Space ( )</option>
+      </select>
+    </div>
+
+    <button id="saveBtn">💾 Save Settings</button>
+    <p id="status"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

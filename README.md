@@ -22,3 +22,14 @@ The model generates a short description that becomes the new filename. All proce
 ## Project Structure
 
 <pre> simple-smart-save/ ├── background.js ├── popup.html ├── popup.js ├── styles.css ├── manifest.json └── icons/ └── icon.png </pre>
+
+```bash
+simple-smart-save/
+├── background.js
+├── popup.html
+├── popup.js
+├── styles.css
+├── manifest.json
+└── icons
+    └── icon.png
+```

@@ -1,6 +1,6 @@
-# Simple Smart Save
+![Banner](https://raw.githubusercontent.com/MichalMSlusarski/simple-smart-save/refs/heads/main/banner.PNG)
 
-![Banner](https://github.com/MichalMSlusarski/simple-smart-save/banner.png)
+# Simple Smart Save
 
 This Chrome Extension was built for the **Google Chrome Built-in AI Challenge 2025**.
 
